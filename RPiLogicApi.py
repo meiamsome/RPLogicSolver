@@ -22,10 +22,10 @@ def getTruthtable(outputPins, inputPin):
 		for i, val in enumerate(oPinVals):
 			GPIO.output(outputPins[i], val)
 
-		time.sleep(1)
+		time.sleep(0.33)
 		truthtable[oPinVals] = GPIO.input(inputPin)
 
 	return truthtable
 	GPIO.cleanup()
 
-while(1): print (getTruthtable([9, 11], 10))
+while(1): print (getTruthtable([9,8, 11], 10))
